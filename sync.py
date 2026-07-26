@@ -136,7 +136,7 @@ def sync_once(client):
         existing_keys = {
             make_dedup_key(t)
             for t in existing
-            if t.get("enteredBy") == "glooko-sync" and t.get("insulin")
+            if t.get("insulin")
         }
         log.info(f"Found {len(existing_keys)} existing glooko-sync treatments in Nightscout")
     except Exception as e:
